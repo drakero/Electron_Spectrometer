@@ -1,0 +1,1520 @@
+          Code Name & Version = MCNP6, 1.0
+  
+     _/      _/        _/_/_/       _/      _/       _/_/_/         _/_/_/
+    _/_/  _/_/      _/             _/_/    _/       _/    _/     _/       
+   _/  _/  _/      _/             _/  _/  _/       _/_/_/       _/_/_/    
+  _/      _/      _/             _/    _/_/       _/           _/    _/   
+ _/      _/        _/_/_/       _/      _/       _/             _/_/      
+  
+  +---------------------------------------------------------------------+
+  | Copyright 2008. Los Alamos National Security, LLC.  All rights      |
+  | reserved.                                                           |
+  |   This material was produced under U.S. Government contract         |
+  | DE-AC52-06NA25396 for Los Alamos National Laboratory, which is      |
+  | operated by Los Alamos National Security, LLC, for the U.S.         |
+  | Department of Energy. The Government is granted for itself and      |
+  | others acting on its behalf a paid-up, nonexclusive, irrevocable    |
+  | worldwide license in this material to reproduce, prepare derivative |
+  | works, and perform publicly and display publicly. Beginning five    |
+  | (5) years after 2008, subject to additional five-year worldwide     |
+  | renewals, the Government is granted for itself and others acting on |
+  | its behalf a paid-up, nonexclusive, irrevocable worldwide license   |
+  | in this material to reproduce, prepare derivative works, distribute |
+  | copies to the public, perform publicly and display publicly, and to |
+  | permit others to do so. NEITHER THE UNITED STATES NOR THE UNITED    |
+  | STATES DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY, LLC, |
+  | NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY, EXPRESS OR IMPLIED, |
+  | OR ASSUMES ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,  |
+  | COMPLETENESS, OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, |
+  | OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT INFRINGE |
+  | PRIVATELY OWNED RIGHTS.                                             |
+  +---------------------------------------------------------------------+
+  
+1mcnp     version 6     ld=05/08/13                     06/18/15 18:58:12 
+ *************************************************************************                 probid =  06/18/15 18:58:12 
+ inp=./MCNP_Decks/MCNP_0.58MeV_18.9Degrees out=Out_0.58MeV_18.9Degrees           
+
+ 
+  warning.  Physics models disabled.
+         1-       c  ************************                                                     
+         2-       c         Cell Cards                                                            
+         3-       c  ************************                                                     
+         4-       c  number  material density then logical definition with surfaces               
+         5-           1   1   -2.70  1 -2 6 -7 8 -9 $Al layer                                     
+         6-           2   2   -1.44  2 -3 6 -7 8 -9 $Cellophane layer                             
+         7-           3   3   -1.38  3 -4 6 -7 8 -9 $PET layer                                    
+         8-           4   4   -4.48  4 -5 6 -7 8 -9 $Phosphor layer                               
+         9-           5     5  -0.000020615 -999 #1 #2 #3 #4                                      
+        10-           6     0         999                                                         
+        11-                                                                                       
+        12-       c  ************************                                                     
+        13-       c       Surface Cards                                                           
+        14-       c  ************************                                                     
+        15-       c number    type  position                                                      
+        16-           1        pz 0 $Lanex surface                                                
+        17-           2        pz 0.0025 $End of Al layer                                         
+        18-           3        pz 0.008 $End of cellophane layer                                  
+        19-           4        pz 0.0255 $End of PET layer                                        
+        20-           5        pz 0.0365 $End of phosphor layer                                   
+        21-           6        px -0.1 $Lanex left edge                                           
+        22-           7        px 0.1 $Lanex right edge                                           
+        23-           8        py -1.5 $Lanex bottom edge                                         
+        24-           9        py 1.5 $Lanex top edge                                             
+        25-          100       pz 0.0256089108911                                                 
+        26-          101       pz 0.0257178217822                                                 
+        27-          102       pz 0.0258267326733                                                 
+        28-          103       pz 0.0259356435644                                                 
+        29-          104       pz 0.0260445544554                                                 
+        30-          105       pz 0.0261534653465                                                 
+        31-          106       pz 0.0262623762376                                                 
+        32-          107       pz 0.0263712871287                                                 
+        33-          108       pz 0.0264801980198                                                 
+        34-          109       pz 0.0265891089109                                                 
+        35-          110       pz 0.026698019802                                                  
+        36-          111       pz 0.0268069306931                                                 
+        37-          112       pz 0.0269158415842                                                 
+        38-          113       pz 0.0270247524752                                                 
+        39-          114       pz 0.0271336633663                                                 
+        40-          115       pz 0.0272425742574                                                 
+        41-          116       pz 0.0273514851485                                                 
+        42-          117       pz 0.0274603960396                                                 
+        43-          118       pz 0.0275693069307                                                 
+        44-          119       pz 0.0276782178218                                                 
+        45-          120       pz 0.0277871287129                                                 
+        46-          121       pz 0.027896039604                                                  
+        47-          122       pz 0.028004950495                                                  
+        48-          123       pz 0.0281138613861                                                 
+        49-          124       pz 0.0282227722772                                                 
+        50-          125       pz 0.0283316831683                                                 
+        51-          126       pz 0.0284405940594                                                 
+        52-          127       pz 0.0285495049505                                                 
+        53-          128       pz 0.0286584158416                                                 
+        54-          129       pz 0.0287673267327                                                 
+        55-          130       pz 0.0288762376238                                                 
+        56-          131       pz 0.0289851485149                                                 
+        57-          132       pz 0.0290940594059                                                 
+        58-          133       pz 0.029202970297                                                  
+        59-          134       pz 0.0293118811881                                                 
+        60-          135       pz 0.0294207920792                                                 
+        61-          136       pz 0.0295297029703                                                 
+        62-          137       pz 0.0296386138614                                                 
+        63-          138       pz 0.0297475247525                                                 
+        64-          139       pz 0.0298564356436                                                 
+        65-          140       pz 0.0299653465347                                                 
+        66-          141       pz 0.0300742574257                                                 
+        67-          142       pz 0.0301831683168                                                 
+        68-          143       pz 0.0302920792079                                                 
+        69-          144       pz 0.030400990099                                                  
+        70-          145       pz 0.0305099009901                                                 
+        71-          146       pz 0.0306188118812                                                 
+        72-          147       pz 0.0307277227723                                                 
+        73-          148       pz 0.0308366336634                                                 
+        74-          149       pz 0.0309455445545                                                 
+        75-          150       pz 0.0310544554455                                                 
+        76-          151       pz 0.0311633663366                                                 
+        77-          152       pz 0.0312722772277                                                 
+        78-          153       pz 0.0313811881188                                                 
+        79-          154       pz 0.0314900990099                                                 
+        80-          155       pz 0.031599009901                                                  
+        81-          156       pz 0.0317079207921                                                 
+        82-          157       pz 0.0318168316832                                                 
+        83-          158       pz 0.0319257425743                                                 
+        84-          159       pz 0.0320346534653                                                 
+        85-          160       pz 0.0321435643564                                                 
+        86-          161       pz 0.0322524752475                                                 
+        87-          162       pz 0.0323613861386                                                 
+        88-          163       pz 0.0324702970297                                                 
+        89-          164       pz 0.0325792079208                                                 
+        90-          165       pz 0.0326881188119                                                 
+        91-          166       pz 0.032797029703                                                  
+        92-          167       pz 0.0329059405941                                                 
+        93-          168       pz 0.0330148514851                                                 
+        94-          169       pz 0.0331237623762                                                 
+        95-          170       pz 0.0332326732673                                                 
+        96-          171       pz 0.0333415841584                                                 
+        97-          172       pz 0.0334504950495                                                 
+        98-          173       pz 0.0335594059406                                                 
+        99-          174       pz 0.0336683168317                                                 
+       100-          175       pz 0.0337772277228                                                 
+       101-          176       pz 0.0338861386139                                                 
+       102-          177       pz 0.033995049505                                                  
+       103-          178       pz 0.034103960396                                                  
+       104-          179       pz 0.0342128712871                                                 
+       105-          180       pz 0.0343217821782                                                 
+       106-          181       pz 0.0344306930693                                                 
+       107-          182       pz 0.0345396039604                                                 
+       108-          183       pz 0.0346485148515                                                 
+       109-          184       pz 0.0347574257426                                                 
+       110-          185       pz 0.0348663366337                                                 
+       111-          186       pz 0.0349752475248                                                 
+       112-          187       pz 0.0350841584158                                                 
+       113-          188       pz 0.0351930693069                                                 
+       114-          189       pz 0.035301980198                                                  
+       115-          190       pz 0.0354108910891                                                 
+       116-          191       pz 0.0355198019802                                                 
+       117-          192       pz 0.0356287128713                                                 
+       118-          193       pz 0.0357376237624                                                 
+       119-          194       pz 0.0358465346535                                                 
+       120-          195       pz 0.0359554455446                                                 
+       121-          196       pz 0.0360643564356                                                 
+       122-          197       pz 0.0361732673267                                                 
+       123-          198       pz 0.0362821782178                                                 
+       124-          199       pz 0.0363910891089                                                 
+       125-          999       so 100                                                             
+       126-                                                                                       
+       127-       c  ************************                                                     
+       128-       c        Problem Type                                                           
+       129-       c  ************************                                                     
+       130-       mode p e                                                                        
+       131-       c  **********************************                                           
+       132-       c        Material Specification                                                 
+       133-       c  **********************************                                           
+       134-       m1  13000.02p -1  $aluminum  -2.70                                              
+       135-       m2  1001.03e -0.062162  $cellophane  -1.44                                      
+       136-            6012.03e -0.444462                                                         
+       137-            8016.03e -0.493376                                                         
+       138-       m3  1001.03e  -0.143711  $polyethylene -.9                                      
+       139-             6000.03e  -0.856289                                                       
+       140-       m4  64000.03e 2  $Phosphor  -4.48                                               
+       141-            8016.03e 2                                                                 
+       142-            16000.03e 1                                                                
+       143-       m5  1001.03e  2  $water vapor  -0.000020615                                     
+       144-            8016.03e  1                                                                
+       145-       c                                                                               
+       146-       imp:p             1 4r                      0  $ 1, 3                           
+       147-       c                                                                               
+       148-       c  *********************************                                            
+       149-       c       Physics Simplification                                                  
+       150-       c  *********************************                                            
+       151-       phys:p  100 0 0 .9 0 $ pair production on change -1 to # for bias               
+       152-       phys:e  100 0 0 1 0 20 0 1 1 0   $ bremstrahlung biased                         
+       153-       c  *************************                                                    
+       154-       c           Tally                                                               
+       155-       c  *************************                                                    
+       156-       F11:e 5   $particle counting                                                    
+       157-       F16:e 4   $Energy deposition averaged over a cell                               
+       158-       FS16 -100 -101 -102 -103 -104 -105 -106 -107 -108 -109                          
+       159-               -110 -111 -112 -113 -114 -115 -116 -117 -118 -119 -120                  
+       160-               -121 -122 -123 -124 -125 -126 -127 -128 -129 -130 -131                  
+       161-               -132 -133 -134 -135 -136 -137 -138 -139 -140 -141 -142                  
+       162-               -143 -144 -145 -146 -147 -148 -149 -150 -151 -152 -153                  
+       163-               -154 -155 -156 -157 -158 -159 -160 -161 -162 -163 -164                  
+       164-               -165 -166 -167 -168 -169 -170 -171 -172 -173 -174 -175                  
+       165-               -176 -177 -178 -179 -180 -181 -182 -183 -184 -185 -186                  
+       166-               -187 -188 -189 -190 -191 -192 -193 -194 -195 -196 -197                  
+       167-               -198 -199 T                                                             
+       168-       c  **************************                                                   
+       169-       c      Energy Tally Card                                                        
+       170-       c  **************************                                                   
+       171-       c e0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2                            
+       172-       c     1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 2.3 2.4                           
+       173-       c     2.5 2.6 2.7 2.8 2.9 3.0                                                   
+       174-       c  ************************                                                     
+       175-       c     Source Definition                                                         
+       176-       c  ************************                                                     
+       177-       sdef DIR=0.945861285478 VEC=0 0 1 POS=0 0 -0.1 CEL=5 ERG=0.58 PAR=3             
+       178-       c sp1 -5 1                                                                      
+       179-       c                                                                               
+       180-       c Number of histories to transport                                              
+       181-       nps 20000                                                                       
+ 
+  comment.  electron importances have been set equal to 1.
+ 
+  warning.    2 materials had unnormalized fractions. print table 40.
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            photon     electron                         
+              cell      mat   density     density     volume       mass            pieces importance importance                        
+
+        1        1        1  6.02616E-02 2.70000E+00 1.50000E-03 4.05000E-03           0  1.0000E+00 1.0000E+00                        
+        2        2        2  1.12354E-01 1.44000E+00 3.30000E-03 4.75200E-03           0  1.0000E+00 1.0000E+00                        
+        3        3        3  1.77749E-01 1.38000E+00 1.05000E-02 1.44900E-02           0  1.0000E+00 1.0000E+00                        
+        4        4        4  3.56335E-02 4.48000E+00 6.60000E-03 2.95680E-02           0  1.0000E+00 1.0000E+00                        
+        5        5        5  2.06786E-06 2.06150E-05 0.00000E+00 0.00000E+00           0  1.0000E+00 1.0000E+00                        
+        6        6        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00 0.0000E+00                        
+
+ total                                               2.19000E-02 5.28600E-02
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         2 warning messages so far.
+1cross-section tables                                                                                   print table 100
+     XSDIR used: /mnt/Linux/MCNP/MCNP_DATA/xsdir_mcnp6.1
+
+     table    length
+
+                        tables from file xdata/mcplib84                                                  
+
+   1000.84p    1974  Update of MCPLIB04 Photon Compton Broadening Data For MCNP5 see LA-UR-    12-00018        01/03/12
+   6000.84p    3228  Update of MCPLIB04 Photon Compton Broadening Data For MCNP5 see LA-UR-    12-00018        01/03/12
+   8000.84p    3348  Update of MCPLIB04 Photon Compton Broadening Data For MCNP5 see LA-UR-    12-00018        01/03/12
+  16000.84p    4730  Update of MCPLIB04 Photon Compton Broadening Data For MCNP5 see LA-UR-    12-00018        01/03/12
+  64000.84p    9636  Update of MCPLIB04 Photon Compton Broadening Data For MCNP5 see LA-UR-    12-00018        01/03/12
+
+                        tables from file xdata/mcplib02                                                  
+
+  13000.02p     719                                                                                            01/15/93
+ 
+  comment.   13000.02p lacks Compton profile data for photon energy broadening.
+
+  total       23635
+
+ maximum photon energy set to    100.0 mev (maximum electron energy)
+
+                        tables from file xdata/el03                                                      
+
+   1000.03e    2329                                                                                          6/6/98    
+   6000.03e    2333                                                                                          6/6/98    
+   8000.03e    2333                                                                                          6/6/98    
+  13000.03e    2337                                                                                          6/6/98    
+  16000.03e    2339                                                                                          6/6/98    
+  64000.03e    2365                                                                                          6/6/98    
+
+1particles and energy limits                                                                            print table 101
+
+                         particle      maximum       smallest      largest       always        always
+                         cutoff        particle      table         table         use table     use model
+   particle type         energy        energy        maximum       maximum       below         above
+
+    2  p    photon      1.0000E-03    1.0000E+02    1.0000E+05    1.0000E+05    1.0000E+36    1.0000E+36
+    3  e    electron    1.0000E-03    1.0000E+02    1.0000E+02    1.0000E+02    1.0000E+36    1.0000E+36
+ 
+ 
+  warning.  material        1 has been set to a conductor.
+
+ the bremsstrahlung production cross section for all materials is scaled by the factor  2.0000E+01
+
+ the x ray production cross section for all materials is scaled by the factor  0.0000E+00
+
+ the secondary electron production cross section for all materials is scaled by the factor  5.0000E-02
+
+ ***********************************************************************************************************************
+
+ dump no.    1 on file runtpe     nps =           0     coll =              0     ctm =        0.00   nrn =             
+    0
+
+         3 warning messages so far.
+1problem summary                                                                                                           
+
+      run terminated when       20000  particle histories were done.
++                                                                                                    06/18/15 18:59:08 
+      c  ************************                                                          probid =  06/18/15 18:58:12 
+
+ photon creation     tracks      weight        energy            photon loss         tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source                   0    0.            0.                  escape               19127    4.7817E-02    4.6853E-03
+ nucl. interaction        0    0.            0.                  energy cutoff            0    0.            3.8359E-05
+ particle decay           0    0.            0.                  time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ from neutrons            0    0.            0.                  compton scatter          0    0.            1.2604E-05
+ bremsstrahlung       65425    1.6356E-01    6.0022E-03          capture              50144    1.2536E-01    1.4839E-03
+ p-annihilation           0    0.            0.                  pair production          0    0.            0.        
+ photonuclear             0    0.            0.                  photonuclear abs         0    0.            0.        
+ electron x-rays          0    0.            0.                  loss to photofis         0    0.            0.        
+ compton fluores          0    0.            0.                                                                        
+ muon capt fluores        0    0.            0.                                                                        
+ 1st fluorescence      3625    9.0625E-03    2.1448E-04                                                                
+ 2nd fluorescence       221    5.5250E-04    3.4615E-06                                                                
+ (gamma,xgamma)           0    0.            0.                                                                        
+ tabular sampling         0    0.            0.                                                                        
+ prompt photofis          0    0.            0.                                                                        
+     total            69271    1.7318E-01    6.2201E-03              total            69271    1.7318E-01    6.2201E-03
+
+   number of photons banked                    65646        average time of (shakes)              cutoffs
+   photon tracks per source particle      3.4636E+00          escape            3.3474E-01          tco   1.0000E+33
+   photon collisions per source particle  2.5655E+00          capture           7.9575E-04          eco   1.0000E-03
+   total photon collisions                     51309          capture or escape 9.3003E-02          wc1  -5.0000E-01
+                                                              any termination   9.3003E-02          wc2  -2.5000E-01
+
+ electron creation   tracks      weight        energy            electron loss       tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source               20000    1.0000E+00    5.8000E-01          escape               14801    7.4005E-01    2.3810E-01
+ nucl. interaction        0    0.            0.                  energy cutoff       556952    2.7848E+01    2.6394E-02
+ particle decay           0    0.            0.                  time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ pair production          0    0.            0.                  scattering               0    0.            4.2942E-01
+ compton recoil           9    4.5000E-04    1.1396E-05          bremsstrahlung           0    0.            6.1031E-03
+ photo-electric        2524    1.2620E-01    1.2225E-03          p-annihilation           0    0.            0.        
+ photon auger             4    2.0000E-04    3.6101E-06          atomic excitation        0    0.            0.        
+ electron auger           0    0.            0.                                                                        
+ knock-on            549216    2.7461E+01    1.1877E-01          electroionization        0    0.            0.        
+ (gamma,xelectron)        0    0.            0.                                                                        
+     total           571753    2.8588E+01    7.0001E-01              total           571753    2.8588E+01    7.0001E-01
+
+   number of electrons banked                 551753                                              cutoffs
+   electron tracks per source particle    2.8588E+01                                                tco   1.0000E+33
+   electron sub-steps per source particle 1.5767E+03                                                eco   1.0000E-03
+   total electron sub-steps                 31533337                                                wc1   0.0000E+00
+                                                                                                    wc2   0.0000E+00
+
+ computer time so far in this run     0.94 minutes            maximum number ever in bank        92
+ computer time in mcrun               0.93 minutes            bank overflows to backup file       0
+ source particles per minute            2.1618E+04
+ random numbers generated                286029784            most random numbers used was       73767 in history        9296
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1photon   activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1        7009         8757         1154    2.8850E-03   8.7111E-02   8.7111E-02   5.0000E-02   1.4122E+00
+        2        2        7942         9002          586    1.4650E-03   8.4811E-02   8.4811E-02   5.0000E-02   3.1697E+00
+        3        3        8346        12186         1722    4.3050E-03   8.7716E-02   8.7716E-02   5.0000E-02   3.3601E+00
+        4        4        2655        61336        47773    1.1943E-01   1.0624E-01   1.0624E-01   5.0000E-02   2.2592E-01
+        5        5       19079        19193           74    1.8500E-04   9.8007E-02   9.8007E-02   5.0000E-02   2.3265E+05
+
+           total         45031       110474        51309    1.2827E-01
+1electron activity in each cell                                                                         print table 126
+
+                       tracks     population    substeps     substeps      number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight    substep 
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1       26309        50063      1473002    7.3650E+01   4.0797E-01   4.5854E-01   1.0000E+00   1.8122E-03
+        2        2       28040        64137      1389211    6.9461E+01   3.9433E-01   4.4282E-01   1.0000E+00   4.5695E-03
+        3        3       30852       190790      5568285    2.7841E+02   3.7563E-01   4.1764E-01   1.0000E+00   3.9823E-03
+        4        4       21352       322605     22943399    1.1472E+03   3.2129E-01   3.6663E-01   1.0000E+00   5.3367E-04
+        5        5       34836        25492       159440    7.9720E+00   2.9282E-01   3.2236E-01   1.0000E+00   1.9989E+02
+
+           total        141389       653087     31533337    1.5767E+03
+
+1tally       11        nps =       20000
+           tally type 1    number of particles crossing a surface.                             
+           particle(s): electrons
+ 
+ surface  5                                                                                                                            
+                 4.62000E-01 0.0078
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       11
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.01      yes          yes            0.00      yes         yes            constant    random      10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+ this tally meets the statistical criteria used to form confidence intervals: check the tally fluctuation chart to verify.
+ the results in other bins associated with this tally may not meet these statistical criteria.
+
+ ----- estimated confidence intervals:  -----
+
+ estimated asymmetric confidence interval(1,2,3 sigma): 4.5839E-01 to 4.6562E-01; 4.5478E-01 to 4.6923E-01; 4.5117E-01 to 4.7284E-01
+ estimated  symmetric confidence interval(1,2,3 sigma): 4.5839E-01 to 4.6561E-01; 4.5478E-01 to 4.6922E-01; 4.5116E-01 to 4.7284E-01
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally       11 with nps =       20000  print table 160
+
+
+ normed average tally per history  = 4.62000E-01          unnormed average tally per history  = 4.62000E-01
+ estimated tally relative error    = 0.0078               estimated variance of the variance  = 0.0000
+ relative error from zero tallies  = 0.0077               relative error from nonzero scores  = 0.0012
+
+ number of nonzero history tallies =        9117          efficiency for the nonzero tallies  = 0.4559
+ history number of largest  tally  =       19705          largest  unnormalized history tally = 3.00000E+00
+ (largest  tally)/(average tally)  = 6.49351E+00          (largest  tally)/(avg nonzero tally)= 2.96006E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 4.62004E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            4.62000E-01             4.62127E-01                     0.000275
+      relative error                  7.81856E-03             7.82084E-03                     0.000292
+      variance of the variance        2.22458E-05             2.35750E-05                     0.059748
+      shifted center                  4.62004E-01             4.62004E-01                     0.000000
+      figure of merit                 1.76823E+04             1.76720E+04                    -0.000584
+
+ the estimated slope of the 122 largest  tallies starting at  1.50000E+00 appears to be decreasing at least exponentially.
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (2.162E+04)*( 9.044E-01)**2 = (2.162E+04)*(8.179E-01) = 1.768E+04
+
+1tally       16        nps =       20000
+           tally type 6    track length estimate of heating.            units   mev/gram       
+           particle(s): electrons
+
+           masses  
+                   cell:       4                                                                                   
+               segment
+                 1       2.92752E-04
+                 2       2.92752E-04
+                 3       2.92752E-04
+                 4       2.92752E-04
+                 5       2.92752E-04
+                 6       2.92752E-04
+                 7       2.92752E-04
+                 8       2.92752E-04
+                 9       2.92752E-04
+                10       2.92752E-04
+                11       2.92752E-04
+                12       2.92752E-04
+                13       2.92752E-04
+                14       2.92752E-04
+                15       2.92752E-04
+                16       2.92752E-04
+                17       2.92752E-04
+                18       2.92752E-04
+                19       2.92752E-04
+                20       2.92752E-04
+                21       2.92752E-04
+                22       2.92752E-04
+                23       2.92752E-04
+                24       2.92752E-04
+                25       2.92752E-04
+                26       2.92752E-04
+                27       2.92752E-04
+                28       2.92752E-04
+                29       2.92752E-04
+                30       2.92752E-04
+                31       2.92752E-04
+                32       2.92752E-04
+                33       2.92752E-04
+                34       2.92752E-04
+                35       2.92752E-04
+                36       2.92752E-04
+                37       2.92752E-04
+                38       2.92752E-04
+                39       2.92752E-04
+                40       2.92752E-04
+                41       2.92752E-04
+                42       2.92752E-04
+                43       2.92752E-04
+                44       2.92752E-04
+                45       2.92752E-04
+                46       2.92752E-04
+                47       2.92752E-04
+                48       2.92752E-04
+                49       2.92752E-04
+                50       2.92752E-04
+                51       2.92752E-04
+                52       2.92752E-04
+                53       2.92752E-04
+                54       2.92752E-04
+                55       2.92752E-04
+                56       2.92752E-04
+                57       2.92752E-04
+                58       2.92752E-04
+                59       2.92752E-04
+                60       2.92752E-04
+                61       2.92752E-04
+                62       2.92752E-04
+                63       2.92752E-04
+                64       2.92752E-04
+                65       2.92752E-04
+                66       2.92752E-04
+                67       2.92752E-04
+                68       2.92752E-04
+                69       2.92752E-04
+                70       2.92752E-04
+                71       2.92752E-04
+                72       2.92752E-04
+                73       2.92752E-04
+                74       2.92752E-04
+                75       2.92752E-04
+                76       2.92752E-04
+                77       2.92752E-04
+                78       2.92752E-04
+                79       2.92752E-04
+                80       2.92752E-04
+                81       2.92752E-04
+                82       2.92752E-04
+                83       2.92752E-04
+                84       2.92752E-04
+                85       2.92752E-04
+                86       2.92752E-04
+                87       2.92752E-04
+                88       2.92752E-04
+                89       2.92752E-04
+                90       2.92752E-04
+                91       2.92752E-04
+                92       2.92752E-04
+                93       2.92752E-04
+                94       2.92752E-04
+                95       2.92752E-04
+                96       2.92752E-04
+                97       2.92752E-04
+                98       2.92752E-04
+                99       2.92752E-04
+               100       2.92752E-04
+               101       2.92752E-04
+              whole      2.95680E-02
+ 
+ cell  4                                                                                                                               
+ segment:          -100                                                                                                                
+                 7.58494E+00 0.0171
+ 
+ cell  4                                                                                                                               
+ segment:           100       -101                                                                                                     
+                 5.73782E+00 0.0187
+ 
+ cell  4                                                                                                                               
+ segment:           100        101       -102                                                                                          
+                 5.80672E+00 0.0192
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102       -103                                                                               
+                 5.85265E+00 0.0201
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103       -104                                                                    
+                 6.06567E+00 0.0184
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104       -105                                                         
+                 6.00918E+00 0.0197
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105       -106                                              
+                 6.09154E+00 0.0193
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106       -107                                   
+                 6.22125E+00 0.0190
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107       -108                        
+                 6.44400E+00 0.0197
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108       -109             
+                 6.34589E+00 0.0196
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109       -110  
+                 6.45586E+00 0.0193
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+        -111                                                                                                                           
+                 6.44674E+00 0.0194
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111       -112                                                                                                                
+                 6.51278E+00 0.0196
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112       -113                                                                                                     
+                 6.69619E+00 0.0196
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113       -114                                                                                          
+                 6.51522E+00 0.0200
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114       -115                                                                               
+                 6.49731E+00 0.0191
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115       -116                                                                    
+                 6.62174E+00 0.0191
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116       -117                                                         
+                 6.57599E+00 0.0197
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117       -118                                              
+                 6.67938E+00 0.0181
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118       -119                                   
+                 6.91103E+00 0.0190
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119       -120                        
+                 6.76846E+00 0.0191
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120       -121             
+                 6.83800E+00 0.0193
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121       -122  
+                 6.77929E+00 0.0207
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+        -123                                                                                                                           
+                 6.68801E+00 0.0198
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123       -124                                                                                                                
+                 6.77071E+00 0.0206
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124       -125                                                                                                     
+                 6.91989E+00 0.0197
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125       -126                                                                                          
+                 6.84655E+00 0.0195
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126       -127                                                                               
+                 6.81082E+00 0.0188
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127       -128                                                                    
+                 6.63651E+00 0.0201
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128       -129                                                         
+                 6.79747E+00 0.0193
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129       -130                                              
+                 6.78563E+00 0.0201
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130       -131                                   
+                 6.63574E+00 0.0193
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131       -132                        
+                 6.85177E+00 0.0201
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132       -133             
+                 6.76550E+00 0.0193
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133       -134  
+                 6.76814E+00 0.0203
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+        -135                                                                                                                           
+                 6.57162E+00 0.0208
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135       -136                                                                                                                
+                 6.60574E+00 0.0199
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136       -137                                                                                                     
+                 6.58575E+00 0.0207
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137       -138                                                                                          
+                 6.62315E+00 0.0206
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138       -139                                                                               
+                 6.55768E+00 0.0222
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139       -140                                                                    
+                 6.40980E+00 0.0200
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140       -141                                                         
+                 6.17381E+00 0.0219
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141       -142                                              
+                 6.13693E+00 0.0216
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142       -143                                   
+                 6.30691E+00 0.0227
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143       -144                        
+                 6.20111E+00 0.0203
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144       -145             
+                 6.31308E+00 0.0210
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145       -146  
+                 6.25258E+00 0.0206
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+        -147                                                                                                                           
+                 6.27111E+00 0.0210
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147       -148                                                                                                                
+                 6.23418E+00 0.0218
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148       -149                                                                                                     
+                 6.11222E+00 0.0211
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149       -150                                                                                          
+                 5.84483E+00 0.0216
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150       -151                                                                               
+                 5.78042E+00 0.0216
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151       -152                                                                    
+                 5.78213E+00 0.0207
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152       -153                                                         
+                 5.90226E+00 0.0212
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153       -154                                              
+                 5.89404E+00 0.0211
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154       -155                                   
+                 5.67296E+00 0.0229
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155       -156                        
+                 5.69168E+00 0.0215
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156       -157             
+                 5.47425E+00 0.0214
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157       -158  
+                 5.43302E+00 0.0222
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+        -159                                                                                                                           
+                 5.36120E+00 0.0227
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159       -160                                                                                                                
+                 5.33553E+00 0.0226
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160       -161                                                                                                     
+                 5.36858E+00 0.0218
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161       -162                                                                                          
+                 5.20736E+00 0.0222
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162       -163                                                                               
+                 5.15679E+00 0.0235
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163       -164                                                                    
+                 5.01626E+00 0.0225
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164       -165                                                         
+                 5.15409E+00 0.0230
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165       -166                                              
+                 4.94233E+00 0.0226
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166       -167                                   
+                 4.88954E+00 0.0239
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167       -168                        
+                 5.01249E+00 0.0241
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168       -169             
+                 4.75628E+00 0.0246
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169       -170  
+                 4.70064E+00 0.0235
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+        -171                                                                                                                           
+                 4.70330E+00 0.0243
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171       -172                                                                                                                
+                 4.64900E+00 0.0252
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172       -173                                                                                                     
+                 4.54688E+00 0.0241
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173       -174                                                                                          
+                 4.49021E+00 0.0231
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174       -175                                                                               
+                 4.47535E+00 0.0247
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175       -176                                                                    
+                 4.37373E+00 0.0234
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176       -177                                                         
+                 4.46062E+00 0.0240
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177       -178                                              
+                 4.22691E+00 0.0239
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178       -179                                   
+                 4.01098E+00 0.0234
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179       -180                        
+                 4.01460E+00 0.0241
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180       -181             
+                 4.00813E+00 0.0266
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181       -182  
+                 3.72292E+00 0.0266
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+        -183                                                                                                                           
+                 3.76349E+00 0.0245
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183       -184                                                                                                                
+                 3.74487E+00 0.0253
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184       -185                                                                                                     
+                 3.60339E+00 0.0254
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185       -186                                                                                          
+                 3.50910E+00 0.0297
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186       -187                                                                               
+                 3.38007E+00 0.0283
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187       -188                                                                    
+                 3.19998E+00 0.0282
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188       -189                                                         
+                 3.12187E+00 0.0276
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189       -190                                              
+                 3.11434E+00 0.0280
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190       -191                                   
+                 2.89260E+00 0.0295
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191       -192                        
+                 2.94698E+00 0.0301
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191        192       -193             
+                 2.91730E+00 0.0286
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191        192        193       -194  
+                 2.84672E+00 0.0276
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191        192        193        194  
+        -195                                                                                                                           
+                 2.61306E+00 0.0280
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191        192        193        194  
+         195       -196                                                                                                                
+                 2.47160E+00 0.0292
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191        192        193        194  
+         195        196       -197                                                                                                     
+                 2.29837E+00 0.0299
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191        192        193        194  
+         195        196        197       -198                                                                                          
+                 2.22570E+00 0.0313
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191        192        193        194  
+         195        196        197        198       -199                                                                               
+                 1.93127E+00 0.0354
+ 
+ cell  4                                                                                                                               
+ segment:           100        101        102        103        104        105        106        107        108        109        110  
+         111        112        113        114        115        116        117        118        119        120        121        122  
+         123        124        125        126        127        128        129        130        131        132        133        134  
+         135        136        137        138        139        140        141        142        143        144        145        146  
+         147        148        149        150        151        152        153        154        155        156        157        158  
+         159        160        161        162        163        164        165        166        167        168        169        170  
+         171        172        173        174        175        176        177        178        179        180        181        182  
+         183        184        185        186        187        188        189        190        191        192        193        194  
+         195        196        197        198        199                                                                               
+                 4.06903E+00 0.0224
+ 
+ cell  4                                                                                                                               
+ segment:   whole cell                                                                                                                 
+                 5.38415E+00 0.0059
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       16
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.01      yes          yes            0.00      yes         yes            constant    random       2.84
+ passed?        yes          yes      yes          yes             yes      yes         yes               yes        yes          no
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  1 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally       16 with nps =       20000  print table 160
+
+
+ normed average tally per history  = 5.38415E+00          unnormed average tally per history  = 1.59199E-01
+ estimated tally relative error    = 0.0059               estimated variance of the variance  = 0.0001
+ relative error from zero tallies  = 0.0010               relative error from nonzero scores  = 0.0058
+
+ number of nonzero history tallies =       19583          efficiency for the nonzero tallies  = 0.9792
+ number of positive history tallies=       19502          unnormed avg positive history tally = 1.59399E-01
+ number of negative history tallies=          81          unnormed avg negative history tally =-2.00233E-04
+ history number of largest  tally  =       11563          largest  unnormalized history tally = 7.26759E-01
+ (largest  tally)/(average tally)  = 4.56511E+00          (largest  tally)/(avg nonzero tally)= 4.46993E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 5.38430E+00
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            5.38415E+00             5.38511E+00                     0.000178
+      relative error                  5.91702E-03             5.91835E-03                     0.000225
+      variance of the variance        1.47328E-04             1.47739E-04                     0.002791
+      shifted center                  5.38430E+00             5.38430E+00                     0.000000
+      figure of merit                 3.08735E+04             3.08596E+04                    -0.000451
+
+ the estimated inverse power slope of the 197 largest  tallies starting at 5.19982E-01 is 2.8430
+ the empirical history score probability density function appears to be increasing at the largest  history scores:
+ please examine. see print table 161.
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (2.162E+04)*( 1.195E+00)**2 = (2.162E+04)*(1.428E+00) = 3.087E+04
+
+1unnormed tally density for tally       16          nonzero tally mean(m) = 1.626E-01   nps =       20000  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 2.8)
+  tally  number num den log den:d----------------------d-----------------------d-----------------------d------------------------d---
+ 3.16-05      1 7.69+00   0.886 ***********************|***********************|***********************|************************|***
+ 3.98-05      0 0.00+00   0.000                        |                       |                       |                        |   
+ 5.01-05      0 0.00+00   0.000                        |                       |                       |                        |   
+ 6.31-05      0 0.00+00   0.000                        |                       |                       |                        |   
+ 7.94-05      0 0.00+00   0.000                        |                       |                       |                        |   
+ 1.00-04      0 0.00+00   0.000                        |                       |                       |                        |   
+ 1.26-04      0 0.00+00   0.000                        |                       |                       |                        |   
+ 1.58-04      1 1.53+00   0.186 ***********************|***********************|***********************|***********             |   
+ 2.00-04      0 0.00+00   0.000                        |                       |                       |                        |   
+ 2.51-04      2 1.94+00   0.287 ***********************|***********************|***********************|**************          |   
+ 3.16-04      2 1.54+00   0.187 ***********************|***********************|***********************|***********             |   
+ 3.98-04      1 6.11-01  -0.214 ***********************|***********************|***********************|*                       |   
+ 5.01-04      1 4.85-01  -0.314 ***********************|***********************|***********************|                        |   
+ 6.31-04      3 1.16+00   0.063 ***********************|***********************|***********************|********                |   
+ 7.94-04      0 0.00+00   0.000                        |                       |                       |                        |   
+ 1.00-03      2 4.86-01  -0.313 ***********************|***********************|***********************|                        |   
+ 1.26-03      5 9.66-01  -0.015 ***********************|***********************|***********************|******                  |   
+ 1.58-03      4 6.14-01  -0.212 ***********************|***********************|***********************|*                       |   
+ 2.00-03      3 3.66-01  -0.437 ***********************|***********************|********************   |                        |   
+ 2.51-03      8 7.74-01  -0.111 ***********************|***********************|***********************|****                    |   
+ 3.16-03     13 9.99-01   0.000 ***********************|***********************|***********************|*******                 |   
+ 3.98-03     21 1.28+00   0.108 ***********************|***********************|***********************|*********               |   
+ 5.01-03     21 1.02+00   0.008 ***********************|***********************|***********************|*******                 |   
+ 6.31-03     39 1.50+00   0.177 ***********************|***********************|***********************|***********             |   
+ 7.94-03     47 1.44+00   0.158 ***********************|***********************|***********************|**********              |   
+ 1.00-02     59 1.43+00   0.157 ***********************|***********************|***********************|**********              |   
+ 1.26-02     73 1.41+00   0.149 ***********************|***********************|***********************|**********              |   
+ 1.58-02    107 1.64+00   0.215 ***********************|***********************|***********************|************            |   
+ 2.00-02    181 2.21+00   0.343 ***********************|***********************|***********************|***************         |   
+ 2.51-02    225 2.18+00   0.338 ***********************|***********************|***********************|***************         |   
+ 3.16-02    312 2.40+00   0.380 ***********************|***********************|***********************|****************        |   
+ 3.98-02    410 2.50+00   0.399 ***********************|***********************|***********************|****************        |   
+ 5.01-02    766 3.72+00   0.570 ***********************|***********************|***********************|********************    |   
+ 6.31-02   1546 5.96+00   0.775 ***********************|***********************|***********************|************************|   
+ 7.94-02   2198 6.73+00   0.828 ***********************|***********************|***********************|************************|** 
+ 1.00-01   2300 5.59+00   0.748 ***********************|***********************|***********************|************************|   
+ 1.26-01   2111 4.08+00   0.610 ***********************|***********************|***********************|*********************   |   
+ 1.58-01   1954 3.00+00   0.477 ***********************|***********************|***********************|******************      |   
+ 2.00-01   1786 2.18+00   0.338 mmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmmmmmmmmmm|mmmmmmmmmmmmmmm         |   
+ 2.51-01   1456 1.41+00   0.149 ***********************|***********************|***********************|**********              |   
+ 3.16-01   1166 8.96-01  -0.048 ***********************|***********************|***********************|*****                   |   
+ 3.98-01    829 5.06-01  -0.296 ***********************|***********************|***********************|                        |   
+ 5.01-01   1148 5.57-01  -0.254 ***********************|***********************|***********************|                        |   
+ 6.31-01    699 2.69-01  -0.570 ***********************|***********************|*****************      |  s                     |   
+ 7.94-01      2 6.12-04  -3.213 *                      |                       |                   s   |                        |   
+  total   19502 9.75-01         d----------------------d-----------------------d-----------------------d------------------------d---
+ a total of          81 tallies were below the score grid bin boundaries.
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+       11   passed the 10 statistical checks for the tally fluctuation chart bin result               
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+       16   missed  1 of 10 tfc bin checks: the slope of decrease of largest tallies is less than the minimum acceptable value of 3.0 
+         passed all bin error check:   102 tally bins all have relative errors less than 0.10 with no zero bins
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+ warning.       1 of the     2 tally fluctuation chart bins did not pass all 10 statistical checks.
+1tally fluctuation charts                              
+
+                            tally       11                          tally       16
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+         1000   4.7100E-01 0.0344 0.0005  0.0   18973   5.2522E+00 0.0264 0.0031 10.0   32325
+         2000   4.7100E-01 0.0243 0.0002  4.3   19165   5.1926E+00 0.0190 0.0016 10.0   31104
+         3000   4.7400E-01 0.0197 0.0001  5.1   18788   5.2771E+00 0.0154 0.0010 10.0   31050
+         4000   4.6700E-01 0.0173 0.0001  6.1   18357   5.2963E+00 0.0133 0.0008 10.0   30893
+         5000   4.6520E-01 0.0155 0.0001 10.0   18032   5.3091E+00 0.0119 0.0006 10.0   30669
+         6000   4.6667E-01 0.0142 0.0001 10.0   18179   5.3043E+00 0.0109 0.0005 10.0   30791
+         7000   4.6843E-01 0.0131 0.0001 10.0   18277   5.3312E+00 0.0101 0.0004 10.0   30491
+         8000   4.6737E-01 0.0123 0.0001 10.0   18238   5.3258E+00 0.0094 0.0004 10.0   30733
+         9000   4.6944E-01 0.0115 0.0000 10.0   18363   5.3424E+00 0.0089 0.0003  9.6   30972
+        10000   4.6870E-01 0.0109 0.0000 10.0   18274   5.3373E+00 0.0084 0.0003  7.8   31023
+        11000   4.6609E-01 0.0105 0.0000 10.0   18008   5.3497E+00 0.0080 0.0003  5.4   30826
+        12000   4.6550E-01 0.0101 0.0000 10.0   17944   5.3547E+00 0.0077 0.0002  3.9   30743
+        13000   4.6392E-01 0.0097 0.0000 10.0   17881   5.3564E+00 0.0074 0.0002  3.9   30785
+        14000   4.6321E-01 0.0093 0.0000 10.0   17839   5.3589E+00 0.0071 0.0002  3.8   30764
+        15000   4.6300E-01 0.0090 0.0000 10.0   17782   5.3748E+00 0.0068 0.0002  3.3   30892
+        16000   4.6363E-01 0.0087 0.0000 10.0   17809   5.3743E+00 0.0066 0.0002  3.0   30816
+        17000   4.6329E-01 0.0085 0.0000 10.0   17771   5.3788E+00 0.0064 0.0002  3.0   30765
+        18000   4.6228E-01 0.0082 0.0000 10.0   17688   5.3789E+00 0.0063 0.0002  3.0   30737
+        19000   4.6184E-01 0.0080 0.0000 10.0   17668   5.3752E+00 0.0061 0.0002  3.0   30791
+        20000   4.6200E-01 0.0078 0.0000 10.0   17682   5.3841E+00 0.0059 0.0001  2.8   30874
+
+ ***********************************************************************************************************************
+
+ dump no.    2 on file runtpe     nps =       20000     coll =       31584646     ctm =        0.93   nrn =        
+ 286029784
+
+         5 warning messages so far.
+
+
+ run terminated when       20000  particle histories were done.
+
+ computer time =    0.94 minutes
+
+ mcnp     version 6     05/08/13                     06/18/15 18:59:08                     probid =  06/18/15 18:58:12 

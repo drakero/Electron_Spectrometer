@@ -1,0 +1,1 @@
+Increased the charge to 0.95 nA, of which about .19 nA is junk; Exposure 0.1 ms
